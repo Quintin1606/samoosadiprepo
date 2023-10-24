@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- site metas -->
+    <title>sbs</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">    
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="/public/css/bootstrap.min.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="/public/css/style.css">
+    <!-- Responsive-->
+    <link rel="stylesheet" href="/public/css/responsive.css">
+    <!-- fevicon -->
+    <link rel="icon" href="/public/images/fevicon.png" type="image/gif" />
+    <!-- Tweaks for older IEs-->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="/public/css/style1.css">
+    <link rel="stylesheet" href="/public/css/styles.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+    <!-- jQuery, Popper.js, and Bootstrap JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        .navbar {
+
+            flex-direction: row;
+            align-items: center;
+            padding: 2rem;
+            justify-content: left;
+        }
+
+        .nav-item {
+            width: 100%;
+            margin-bottom: 0.5rem;
+            padding-left: 1rem;
+        }
+
+        .nav-link {
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            padding: 0.5rem 2rem;
+            width: 100%;
+        }
+
+        .active-nav-item .nav-link {
+            background-color: black;
+            color: white;
+            padding: 10px;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #fcfcfc;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 2rem; /* Adjust padding as needed */
+        }
+
+        /* Add styles for the main content area */
+        .content {
+            margin-top: 80px; /* Adjust margin to make content start below the header */
+        }
+
+        /* Adjust table styles to take full remaining width */
+        table {
+            width: 100%;
+        }  
+        
+        body {
+            padding-top: 56px;
+        }
+
+        .category-table th, .category-table td {
+            text-align: center;
+        }
+
+        .edit-modal {
+            margin-top: 50px;
+        }     
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .product-card {
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: center;
+        }    
+        body {
+            padding-top: 56px;
+        }
+
+        .order-table th, .order-table td {
+            text-align: center;
+        }
+
+        .edit-modal {
+            margin-top: 50px;
+        }     
+        .cart {
+            margin-top: 50px;
+        }
+
+        .cart-item {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 10px;
+        }
+
+        .checkout {
+            margin-top: 20px;
+            text-align: right;
+        }  
+    </style>
+</head>
+
+<body class="main-layout">
+    <!-- Add your body content here -->
+    <!-- loader -->
+    <div class="navbar theme-orange shadowNav " style="border: 1px solid 1px solid rgb(230 230 230);">
+        <div>
+            <div style="padding-left: 1rem;height: 13rem">
+                <img src="/public/images/1.png" alt="" class="avatar">
+                <h2 style="font-size: 0.8rem;color: #2d2d2d;font-weight: bold;width: 100%;padding-top: 3rem;">
+                    Welcome back
+                </h2>
+            </div>
+            <ul class="navbar-nav" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                <li class="nav-item">
+                    <a class="nav-link" href="/createmenu">Create Product<i class="fas fa-shopping-cart"></i></a>
+                </li>
+                <li class="nav-item" style="width: 100%; border-top-left-radius: 6px; border-bottom-left-radius: 6px;">
+                    <a class="nav-link" href="/customerordermanagement">Customer Orders<i class="fas fa-shopping-basket"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/purchaseorder">Supplier Order<i class="fas fa-truck"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/viewupdatecategories">Manage Categories<i class="fas fa-list-alt"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/productsmanagement">Manage Products<i class="fas fa-cubes"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/report">Reports<i class="fas fa-chart-bar"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/logout">Logout<i class="fas fa-sign-out-alt"></i></a>
+                </li>
+            </ul> 
+        </div>
+
+    </div>            
+    <!-- end header inner -->
+    <!-- end header -->
+    <!-- top -->
+
+    <div class="main-content" style="margin:0rem;">
+
+        <div class="shadowNav" style="    
+        z-index: 2;
+        background-color: #fcfcfc;
+        display: grid;
+        height: 11vh;
+        grid-template-columns: 60% 40%;
+  align-items: center;
+        flex-direction: row;
+        position: fixed;
+        width: 100%;
+        justify-content: left;
+  border: 1px solid 1px solid rgb(230 230 230);
+  
+  ">
+              <div style="display: flex;width: 100%;justify-content: center;">
+                    <h6 style="   font-weight: 800;
+                    font-size: 1.5em;
+                    padding-left: 15rem;">Create Product
+                    </h6>
+              </div>
+    </div>
+
+    <div class="contact" style="width: 100%; overflow-y: auto; ">
+        <div class="container">
+            <div class="row">
+    
+                <div class="col-md-6">
+                    <form id="addProductForm" class="main_form" method="POST">
+                        <div class="col-md-6">
+                            <label for="CategoryId">Category</label>
+                            <select id="CategoryId" name="CategoryId" class="contactus" required>
+                                <!-- Categories will be dynamically populated here -->
+                            </select>
+                        </div>
+    
+                        <!-- Other form elements -->
+                        <div class="col-md-6">
+                            <label for="ProductName">Product Name</label>
+                            <input type="text" id="ProductName" name="ProductName" class="contactus" required>
+                        </div>
+    
+                        <div class="col-md-6">
+                            <label for="ProductImage">Product Description</label>
+                            <input type="text" id="ProductImage" name="ProductImage" class="contactus" required>
+                        </div>
+    
+                        <div class="col-md-6">
+                            <!-- <label for="UnitsInInventory">Units In Inventory</label> -->
+                            <input type="hidden" id="UnitsInInventory" name="UnitsInInventory" class="contactus" required>
+                        </div>
+                        <!-- ... (other form elements) -->
+                        <div class="col-md-12">
+                            <label for="CategoryId">Supplier Items</label>
+                            <div id="supplierItemsContainer"></div>
+                        </div>
+    
+                        <div class="col-md-12">
+                            <button class="send_btn" type="submit">Create Product</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-6">
+                   <img src="/public/images/shwama.png" alt="Image Description" class="img_responsive">
+               </div>
+    
+            </div>
+        </div>
+    </div>
+        
+</div>    
+
+ <!-- JavaScript files-->
+ <script src="/public/js/jquery.min.js"></script>
+ <script src="/public/js/bootstrap.bundle.min.js"></script>
+ <script src="/public/js/jquery-3.0.0.min.js"></script>
+ <!-- sidebar -->
+ <script src="/public/js/custom.js"></script>
+ <!-- <script>
+    AOS.init();
+ </script> -->
+ <script>
+   document.addEventListener("DOMContentLoaded", function () {
+       let supplierItems; // Declare the supplierItems variable in a scope accessible to the entire script
+
+        // Fetch categories and populate the dropdown
+        fetch("http://localhost:5358/api/categories")
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(categories => {
+                // Populate the dropdown with category options
+                const categoryDropdown = document.getElementById("CategoryId");
+                categories.forEach(category => {
+                    const option = document.createElement("option");
+                    option.value = category.categoryId;
+                    option.textContent = category.categoryName;
+                    categoryDropdown.appendChild(option);
+                });
+            })
+            .catch(error => {
+                console.error('Fetch categories error:', error);
+            });
+
+       // Fetch supplier items and populate the container
+       fetch("http://localhost:5358/api/supplieritems")
+           .then(response => {
+               if (!response.ok) {
+                   throw new Error(`HTTP error! Status: ${response.status}`);
+               }
+               return response.json();
+           })
+           .then(items => {
+               supplierItems = items; // Assign the fetched items to the supplierItems variable
+               // Populate the supplier items container
+               const supplierItemsContainer = document.getElementById("supplierItemsContainer");
+
+               supplierItems.forEach(item => {
+                   // Create a container div for each item to group checkbox, label, and quantity input
+                   const itemContainer = document.createElement("div");
+                   itemContainer.classList.add("col-md-6"); // Apply the same style as in your example
+                   // Create checkbox
+                   const checkbox = document.createElement("input");
+                   checkbox.type = "checkbox";
+                   checkbox.name = `selectedItems_${item.supplierItemId}`;
+                   checkbox.value = item.supplierItemId;
+                   checkbox.classList.add("contactus"); // Apply the same style as in your example
+                   // Create label
+                   const label = document.createElement("label");
+                   label.textContent = `${item.itemName} - ${item.itemDescription}`;
+                   // Create quantity input
+                   const quantityInput = document.createElement("input");
+                   quantityInput.type = "number";
+                   quantityInput.name = `itemQuantity_${item.supplierItemId}`;
+                   quantityInput.placeholder = "Quantity";
+                   quantityInput.classList.add("contactus"); // Apply the same style as in your example
+                   // Append elements to the container div
+                   itemContainer.appendChild(checkbox);
+                   itemContainer.appendChild(label);
+                   itemContainer.appendChild(quantityInput);
+                   // Append the container div to the main container
+                   supplierItemsContainer.appendChild(itemContainer);
+                   // Add line break for better spacing
+                   supplierItemsContainer.appendChild(document.createElement("br"));
+               });
+
+               // Handle form submission
+               document.getElementById("addProductForm").addEventListener("submit", function (event) {
+                   event.preventDefault();
+
+                   const formData = new FormData(this);
+                   const selectedItems = [];
+
+                   // Iterate through selected items and get corresponding quantities
+                   supplierItems.forEach(item => {
+                       const itemId = item.supplierItemId;
+                       const quantity = formData.get(`itemQuantity_${itemId}`);
+                       if (formData.has(`selectedItems_${itemId}`)) {
+                           selectedItems.push({ id: itemId, quantity: parseInt(quantity) });
+                       }
+                   });
+
+                   // Convert form data to JSON
+                   const json = {
+                        "categoryId": parseInt(formData.get("CategoryId")) || 0,
+                        "productName": formData.get("ProductName") || "",
+                        "productImage": formData.get("ProductImage") || "",
+                        "unitsInInventory": parseInt(formData.get("UnitsInInventory")) || 0,
+                        "selectedItems": selectedItems, 
+                    };
+
+                   console.log("The form data is: ", json);
+
+                   // Use fetch to submit the form data to create a new product
+                   fetch("http://localhost:5358/api/products/CreateProductWithItems", {
+                       method: "POST",
+                       headers: {
+                           "Content-Type": "application/json"
+                       },
+                       body: JSON.stringify(json),
+                   })
+                       .then(response => {
+                           if (!response.ok) {
+                               throw new Error(`HTTP error! Status: ${response.status}`);
+                           }
+                           return response.json(); // Assuming the server responds with JSON
+                       })
+                       .then(product => {
+                           // Product created successfully, now link items to the product
+                           // linkItemsToProduct(product.ProductId);
+                       })
+                       .catch(error => {
+                           // Handle errors
+                           console.error('Fetch create product error:', error);
+                       });
+               });
+
+               // Function to link items to the created product
+               function linkItemsToProduct(productId) {
+                   // Fetch all selected items (you may need to adapt this based on your form structure)
+                   const selectedItems = document.querySelectorAll('input[name^="selectedItems_"]:checked');
+
+                   // Rest of the code for linking items to the product
+                   // ...
+               }
+           })
+           .catch(error => {
+               console.error('Fetch supplier items error:', error);
+           });
+   });
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Get all nav items
+        const navItems = document.querySelectorAll('.nav-item');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        // Function to remove active class from all items
+        function removeActiveClass() {
+            navItems.forEach((innerItem) => innerItem.classList.remove('active-nav-item'));
+        }
+
+        // Add click event listener to each nav item
+        navItems.forEach((item, index) => {
+            item.addEventListener('click', function () {
+                removeActiveClass();
+                // Add active class to clicked item
+                this.classList.add('active-nav-item');
+            });
+        });
+
+        // Check current URL and set active class
+        const currentURL = window.location.pathname;
+        navLinks.forEach((link, index) => {
+            if (link.getAttribute('href') === currentURL) {
+                removeActiveClass();
+                navItems[index].classList.add('active-nav-item');
+            }
+        });
+    });
+
+</script>
+</body>
+
+</html>

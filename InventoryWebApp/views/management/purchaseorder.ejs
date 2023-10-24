@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- site metas -->
+    <title>sbs</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">    
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="/public/css/bootstrap.min.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="/public/css/style.css">
+    <!-- Responsive-->
+    <link rel="stylesheet" href="/public/css/responsive.css">
+    <!-- fevicon -->
+    <link rel="icon" href="/public/images/fevicon.png" type="image/gif" />
+    <!-- Tweaks for older IEs-->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="/public/css/style1.css">
+    <link rel="stylesheet" href="/public/css/styles.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+    <!-- jQuery, Popper.js, and Bootstrap JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        .button-style {
+         padding: 15px 30px;
+         /* color: #2b2b2b; */
+         font-size: 17px;
+         line-height: 20px;
+         font-weight: 400;
+         border-radius: 30px;
+         text-transform: uppercase;
+         color: #fff;
+         background: #f0390f;
+         margin: 10px;
+        padding: 10px 20px;
+        } 
+
+        .navbar {
+
+            flex-direction: column;
+            padding: 2rem;
+            justify-content: flex-start;
+        }
+
+        .nav-item {
+            width: 100%;
+            margin-bottom: 0.5rem;
+            padding-left: 1rem;
+
+        }
+
+        .nav-link {
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            width: 100%;
+        }
+
+        .active-nav-item .nav-link {
+            background-color: black;
+            color: white;
+            padding: 10px;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #fcfcfc;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 2rem; /* Adjust padding as needed */
+        }
+
+        /* Add styles for the main content area */
+        .content {
+            margin-top: 80px; /* Adjust margin to make content start below the header */
+        }
+
+        /* Adjust table styles to take full remaining width */
+        table {
+            width: 100%;
+        }  
+        
+        body {
+            padding-top: 56px;
+        }
+
+        .category-table th, .category-table td {
+            text-align: center;
+        }
+
+        .edit-modal {
+            margin-top: 50px;
+        }     
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .product-card {
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: center;
+        }    
+        body {
+            padding-top: 56px;
+        }
+
+        .order-table th, .order-table td {
+            text-align: center;
+        }
+
+        .edit-modal {
+            margin-top: 50px;
+        }       
+
+        .contactus1 {
+        padding: 0px 10px;
+        width: 100%;
+        height: 50px;
+        background: #fff;
+        color: #501f14;
+        font-size: 17px;
+        font-weight: normal;
+        border-radius: 11px;
+        border: inherit;
+        box-shadow: 0px 0px 2px 0 #f34b52d4;  
+        margin: 5px;          
+        }
+    </style>
+</head>
+
+<body class="main-layout">
+    <!-- Add your body content here -->
+    <!-- loader -->
+    <div class="navbar theme-orange shadowNav " style="border: 1px solid 1px solid rgb(230 230 230);">
+        <div>
+            <div style="padding-left: 1rem;height: 13rem">
+                <img src="/public/images/1.png" alt="" class="avatar">
+                <h2 style="font-size: 0.8rem;color: #2d2d2d;font-weight: bold;width: 100%;padding-top: 3rem;">
+                    Welcome back
+                </h2>
+            </div>
+            <ul class="navbar-nav" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                <li class="nav-item">
+                    <a class="nav-link" href="/createmenu">Create Menu<i class="fas fa-shopping-cart"></i></a>
+                </li>
+                <li class="nav-item" style="width: 100%; border-top-left-radius: 6px; border-bottom-left-radius: 6px;">
+                    <a class="nav-link" href="/customerordermanagement">Customer Orders<i class="fas fa-shopping-basket"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/purchaseorder">Supplier Order<i class="fas fa-truck"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/viewupdatecategories">Manage Categories<i class="fas fa-list-alt"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/productsmanagement">Manage Products<i class="fas fa-cubes"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/report">Reports<i class="fas fa-chart-bar"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/logout">Logout<i class="fas fa-sign-out-alt"></i></a>
+                </li>
+            </ul>                      
+        </div>
+
+    </div>
+    <!-- end header inner -->
+    <!-- end header -->
+    <!-- top -->
+    <div class="main-content" style="margin:0rem;">
+
+        <div class="shadowNav" style="    
+        z-index: 2;
+        background-color: #fcfcfc;
+        display: grid;
+        height: 11vh;
+        grid-template-columns: 60% 40%;
+  align-items: center;
+        flex-direction: row;
+        position: fixed;
+        width: 100%;
+        justify-content: left;
+  border: 1px solid 1px solid rgb(230 230 230);
+  
+  ">
+              <div style="display: flex;width: 100%;justify-content: center;">
+                    <h6 style="   font-weight: 800;
+                    font-size: 1.5em;
+                    padding-left: 15rem;">Order Supplier Items
+                    </h6>
+              </div>
+    </div>
+
+    <div class="contact" style="width: 100%; overflow-y: auto;">
+        <div class="container">
+            <div class="row">
+                <div class="container">
+                <div class="col-md-12">
+                    <!-- Table for displaying supplier items -->
+                    <table style="border: 1; width: 100%; table-layout: fixed;">
+                        <thead>
+                            <tr>
+                                <th>Supplier Name</th>
+                                <th>Item Name</th>
+                                <th>Item Description</th>
+                                <th>Units in Stock</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="supplierItemsTableBody"></tbody>
+                    </table>
+                </div>
+                <div class="col-md-12">
+                    <!-- Shopping Cart -->
+                    <h3>Shopping Cart</h3>
+                    <div id="shoppingCart"></div>
+                    <button id="checkoutBtn" class="button-style" onclick="checkout()">Checkout</button>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+ <!-- JavaScript files-->
+ <script src="/public/js/jquery.min.js"></script>
+ <script src="/public/js/bootstrap.bundle.min.js"></script>
+ <script src="/public/js/jquery-3.0.0.min.js"></script>
+ <!-- sidebar -->
+ <script src="/public/js/custom.js"></script>
+ <script>
+   let allItems = [];
+   let allSuppliers = []; // Add an array to store supplier data
+   // Shopping cart logic
+   let shoppingCart = [];
+   
+   document.addEventListener("DOMContentLoaded", function () {
+
+       // Fetch supplier items and populate the table
+       fetch("http://localhost:5358/api/supplieritems")
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(supplierItems => {
+       // Fetch suppliers and store in the allSuppliers array
+       fetch("http://localhost:5358/api/suppliers")
+           .then(response => {
+               if (!response.ok) {
+                   throw new Error(`HTTP error! Status: ${response.status}`);
+               }
+               return response.json();
+           })
+           .then(suppliers => {
+               allSuppliers = suppliers;
+               const supplierItemsTableBody = document.getElementById("supplierItemsTableBody");
+                supplierItems.forEach(item => {
+                    const row = document.createElement("tr");
+                    row.innerHTML = `
+                        <td>${getSupplierName(item.supplierId)}</td>
+                        <td>${item.itemName}</td>
+                        <td>${item.itemDescription}</td>
+                        <td>
+                            <input class="contactus1" type="number" id="unitsInStock_${item.supplierItemId}" value="${item.unitsInStock}">
+                        </td>
+                        <td><button class="button-style" onclick="addToCart('${item.supplierItemId}')">Add to Cart</button></td>
+                    `;
+
+                    supplierItemsTableBody.appendChild(row);
+                    allItems.push(item);
+
+                    // Add event listener to update quantities
+                    const inputElement = document.getElementById(`unitsInStock_${item.supplierItemId}`);
+                    inputElement.addEventListener("change", function () {
+                        const newQuantity = parseInt(inputElement.value, 10);
+                        // Update the 'allItems' array with the new quantity
+                        const itemToUpdate = allItems.find(i => i.supplierItemId === item.supplierItemId);
+                        if (itemToUpdate) {
+                            itemToUpdate.unitsInStock = newQuantity;
+                        }
+                    });
+                });               
+           })
+           .catch(error => {
+               console.error('Fetch suppliers error:', error);
+           });
+            })
+            .catch(error => {
+                console.error('Fetch supplier items error:', error);
+            });
+   });
+
+   function getSupplierName(supplierId) {
+       // Find the supplier with the matching ID and return the name
+       const supplier = allSuppliers.find(supplier => supplier.supplierId == supplierId);
+       return supplier ? supplier.supplierName : 'Loading Name';
+   }
+
+   function addToCart(supplierItemId) {
+       console.log("The respective id is: ", supplierItemId);
+       // Find the item in allItems based on supplierItemId
+       const supplierItem = allItems.find(item => item.supplierItemId == supplierItemId);
+
+       if (supplierItem) {
+           // Check if the item is already in the cart
+           const existingItem = shoppingCart.find(item => item.supplierItemId === supplierItem.supplierItemId);
+
+           if (existingItem) {
+               // Update unitsInStock
+               existingItem.unitsInStock = supplierItem.unitsInStock;
+           } else {
+               // Add the item to the cart
+               shoppingCart.push(supplierItem);
+           }
+
+           updateShoppingCart();
+       } else {
+           console.error('Item not found in allItems:', supplierItemId);
+       }
+   }
+
+   function updateShoppingCart() {
+       const shoppingCartDiv = document.getElementById("shoppingCart");
+       shoppingCartDiv.innerHTML = "<h4>Cart:</h4>";
+
+       shoppingCart.forEach(item => {
+           const cartItemDiv = document.createElement("div");
+           cartItemDiv.textContent = `Supplier: ${getSupplierName(item.supplierId)}, Item Name: ${item.itemName}, Units: ${item.unitsInStock}`;
+           shoppingCartDiv.appendChild(cartItemDiv);
+       });
+   }
+
+   async function checkout() {
+    console.log("The Shopping cart is: ", shoppingCart);
+    for (const item of shoppingCart) {
+        try {
+            console.log("The order to be created is: ", item);
+
+            const order = {
+                supplierId: item.supplierId, // Replace with the correct property from your item
+                supplierItemId: item.supplierItemId, // Replace with the correct property from your item
+                quantity: item.unitsInStock, // Replace with the correct property from your item
+                totalPrice: item.itemCostPrice * item.unitsInStock, // Replace with the correct property and calculation from your item
+                orderStatus: "Pending", // Set to the appropriate order status
+                dateOfOrder: new Date().toISOString(), // You can adjust the date if needed
+                dateFulfilled: new Date().toISOString(), // You can adjust this if needed
+            };
+
+            const response = await fetch("http://localhost:5358/api/supplierproductorders", {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(order), // Send the order object
+            });
+
+            if (response.ok) {
+                // Order created successfully
+                console.log('Order created for item:', item.supplierItemId);
+            } else {
+                console.error('Error creating order for item:', item.supplierItemId);
+            }
+        } catch (error) {
+            // Handle errors
+            console.error('Checkout error:', error);
+        }
+    }
+
+    // Clear the shopping cart
+    shoppingCart.length = 0;
+    updateShoppingCart();
+}
+
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Get all nav items
+        const navItems = document.querySelectorAll('.nav-item');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        // Function to remove active class from all items
+        function removeActiveClass() {
+            navItems.forEach((innerItem) => innerItem.classList.remove('active-nav-item'));
+        }
+
+        // Add click event listener to each nav item
+        navItems.forEach((item, index) => {
+            item.addEventListener('click', function () {
+                removeActiveClass();
+                // Add active class to clicked item
+                this.classList.add('active-nav-item');
+            });
+        });
+
+        // Check current URL and set active class
+        const currentURL = window.location.pathname;
+        navLinks.forEach((link, index) => {
+            if (link.getAttribute('href') === currentURL) {
+                removeActiveClass();
+                navItems[index].classList.add('active-nav-item');
+            }
+        });
+    });
+
+</script>
+
+
+</body>
+
+</html>

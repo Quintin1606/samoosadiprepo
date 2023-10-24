@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <!-- basic -->
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <!-- mobile metas -->
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+   <!-- site metas -->
+   <title>sbs</title>
+   <meta name="keywords" content="">
+   <meta name="description" content="">
+   <meta name="author" content="">
+   <!-- bootstrap css -->
+   <link rel="stylesheet" href="/public/css/bootstrap.min.css">
+   <!-- style css -->
+   <link rel="stylesheet" href="/public/css/style.css">
+   <!-- Responsive-->
+   <link rel="stylesheet" href="/public/css/responsive.css">
+   <!-- fevicon -->
+   <link rel="icon" href="/public/images/fevicon.png" type="image/gif" />
+   <!-- Tweaks for older IEs-->
+   <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+   <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+</head>
+<!-- body -->
+
+<body class="main-layout">
+   <!-- loader  -->
+
+   <!-- end loader -->
+   <!-- header -->
+   <div class="header">
+      <div class="container-fluid">
+         <div class="row d_flex">
+            <div class=" col-md-2 col-sm-3 col logo_section">
+               <div class="full">
+                  <div class="center-desk">
+                     <div class="logo">
+                        <a href="index.html"><img src="/public/images/shawarmalogo.png" alt="#" /></a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-md-8 col-sm-12">
+               <nav class="navigation navbar navbar-expand-md navbar-dark ">
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04"
+                     aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                     <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarsExample04">
+                     <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                           <a class="nav-link" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="/">About</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="/shop">Shop</a>
+                        </li>
+                     </ul>
+                  </div>
+               </nav>
+            </div>
+            <div class="col-md-2">
+               <ul class="email text_align_right">
+                  <li class="d_none"><a href="Javascript:void(0)"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+                  <li class="d_none"> <a href="Javascript:void(0)"><i class="fa fa-search" style="cursor: pointer;"
+                           aria-hidden="true"></i></a> </li>
+               </ul>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- end header inner -->
+   <!-- end header -->
+   <!-- top -->
+   <div class="full_bg">
+      <div class="slider_main">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-md-12">
+                  <!-- carousel code -->
+                  <div id="carouselExampleIndicators" class="carousel slide">
+                     <div class="carousel-inner">
+                        <!-- first slide -->
+                        <div class="carousel-item active" style="margin-top: 50px;">
+                           <div class="carousel-caption relative">
+                              <div class="row d_flex">
+                                 <div class="col-md-5">
+                                    <div class="board">
+                                       <div class="contact">
+                                          <div class="container">
+                                             <div class="row ">
+                                                <div class="col-md-6">
+                                                   <form id="request" class="main_form">
+                                                      <div class="row">
+                                                         <div class="col-md-12">
+                                                            <input class="contactus" placeholder="Email" type="text"
+                                                               name="Email">
+                                                         </div>
+                                                         <div class="col-md-12">
+                                                            <input class="contactus" placeholder="Password" type="text"
+                                                               name="Password">
+                                                         </div>
+                                                         <div class="col-md-12">
+                                                            <button class="send_btn"
+                                                               onclick="login(event)">Login</button>
+                                                         </div>
+                                                      </div>
+                                                   </form>
+                                                   <!-- "Don't have an account? Sign up" link -->
+                                                   <p class="mt-3">Don't have an account? <a href="#"
+                                                         data-toggle="modal" data-target="#signup-modal">Sign up</a></p>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-7">
+                                    <div class="banner_img">
+                                       <figure><img class="img_responsive" src="/public/images/shwama.png"></figure>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- This is where we made changes -->
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!--  footer -->
+   <!--  footer -->
+   <footer>
+      <div class="footer">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-4 ">
+                  <div class="infoma">
+                     <h3>Contact Us</h3>
+                     <ul class="conta">
+                        <li><i class="fa fa-map-marker" aria-hidden="true"></i>Locations
+                        </li>
+                        <li><i class="fa fa-phone" aria-hidden="true"></i>Call +01 1234567890</li>
+                        <li> <i class="fa fa-envelope" aria-hidden="true"></i><a href="Javascript:void(0)">
+                              demo@gmail.com</a></li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="col-md-8">
+                  <div class="row border_left">
+                     <div class="col-md-12">
+                        <div class="infoma">
+                           <h3>Newsletter</h3>
+                           <form class="form_subscri">
+                              <div class="row">
+                                 <div class="col-md-12">
+                                 </div>
+                                 <div class="col-md-4">
+                                    <input class="newsl" placeholder="Enter your email" type="text"
+                                       name="Enter your email">
+                                 </div>
+                                 <div class="col-md-4">
+                                    <input class="newsl" placeholder="Enter your email" type="text"
+                                       name="Enter your email">
+                                 </div>
+                                 <div class="col-md-4">
+                                    <button class="subsci_btn">subscribe</button>
+                                 </div>
+                              </div>
+                           </form>
+                        </div>
+                     </div>
+                     <div class="col-md-9">
+                        <div class="infoma">
+                           <h3>Useful Link</h3>
+                           <ul class="fullink">
+                              <li><a href="index.html">Home</a></li>
+                              <li><a href="about.html">About</a></li>
+                              <li><a href="skating.html">Skating</a></li>
+                              <li><a href="shop.html">Shop</a></li>
+                              <li><a href="contact.html">Contact Us</a></li>
+                           </ul>
+                        </div>
+                     </div>
+                     <div class="col-md-3">
+                        <div class="infoma text_align_left">
+                           <ul class="social_icon">
+                              <li><a href="Javascript:void(0)"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                              </li>
+                              <li><a href="Javascript:void(0)"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                              <li><a href="Javascript:void(0)"><i class="fa fa-linkedin-square"
+                                       aria-hidden="true"></i></a></li>
+                              <li><a href="Javascript:void(0)"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="copyright">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-12">
+                     <p>© 2020 All Rights Reserved. Design by <a href="https://html.design/"> Free html Templates</a>
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </footer>
+   <!-- end footer -->
+
+   <!-- Signup Modal -->
+   <div id="signup-modal" class="modal fade" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title">Sign Up</h5>
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+               </button>
+            </div>
+            <div class="modal-body">
+               <form id="signup-form" class="main_form">
+                  <div class="row">
+                     <div class="col-md-12">
+                        <input class="contactus" placeholder="Username" type="text" name="Username">
+                     </div>
+                     <div class="col-md-12">
+                        <input class="contactus" placeholder="Email" type="text" name="UserEmail">
+                     </div>
+                     <div class="col-md-12">
+                        <input class="contactus" placeholder="Password" type="password" name="UserPassword">
+                     </div>
+                     <div class="col-md-12">
+                        <input class="contactus" placeholder="Contact" type="text" name="UserContact">
+                     </div>
+
+                     <div class="col-md-12">
+                        <button class="send_btn" onclick="signup()">Sign Up</button>
+                     </div>
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <!-- JavaScript files-->
+   <script src="/public/js/jquery.min.js"></script>
+   <script src="/public/js/bootstrap.bundle.min.js"></script>
+   <script src="/public/js/jquery-3.0.0.min.js"></script>
+   <!-- sidebar -->
+   <script src="/public/js/custom.js"></script>
+
+
+   <script>
+
+      function login(event) {
+         // Prevent the default form submission
+         event.preventDefault();
+
+         // Collect form data
+         var emailInput = document.getElementById("request").querySelector('input[name="Email"]');
+         var passwordInput = document.getElementById("request").querySelector('input[name="Password"]');
+
+         var loginDto = {
+            username: emailInput.value,
+            userPassword: passwordInput.value
+         };
+
+         // if (loginDto.username === "admin@email.com") { //admin
+         //    window.location.href = "/createmenu";
+         // } else if (loginDto.username === "employee@email.com") { // customer
+         //    window.location.href = "/shop";
+         // } else if (loginDto.username === "tshimolong@gmail.com") { // supplier
+         //    window.location.href = "/additems";
+         // }
+
+         // Send the request
+         fetch('http://localhost:5358/api/Auth/LoginUser', {
+            method: 'POST',
+            headers: {
+               'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(loginDto),
+         })
+            .then(response => {
+               if (!response.ok) {
+                  throw new Error(`HTTP error! Status: ${response.status}`);
+               }
+               return response.json();
+            })
+            .then(data => {
+               // Handle the response from the server
+               if (data.userRole === 1) {
+                  // Login customer
+                  window.location.href = "/shop";
+               } else if (data.userRole === 2) {
+                  // Login supplier
+                  window.location.href = "/additems";
+               } else if (data.userRole === 3) {
+                  // Login supplier
+                  window.location.href = "/createmenu";
+               }
+            })
+            .catch((error) => {
+               console.error('Error:', error);
+            });
+      }
+
+
+      function signup() {
+         // Collect form data
+         var registerDto = {
+            username: document.getElementById("signup-form").elements["Username"].value,
+            userEmail: document.getElementById("signup-form").elements["UserEmail"].value,
+            userPassword: document.getElementById("signup-form").elements["UserPassword"].value,
+            userContact: document.getElementById("signup-form").elements["UserContact"].value,
+            userRole: 0 // 
+         };
+         // Send registration data to the server
+         fetch('http://localhost:5358/api/Auth/RegisterUser', {
+            method: 'POST',
+            headers: {
+               'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(registerDto),
+         })
+            .then(response => response.json())
+            .then(data => {
+               // Handle the response from the server
+               
+               alert('User registered successfully!');
+               // Optionally, you can perform additional actions after successful registration
+            })
+            .catch((error) => {
+               console.error('Error:', error);
+               // Handle errors, such as displaying an error message to the user
+            });
+
+         // Close the modal
+         $('#signup-modal').modal('hide');
+      }
+   </script>
+</body>
+
+</html>

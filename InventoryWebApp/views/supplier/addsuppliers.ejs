@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- site metas -->
+    <title>sbs</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">    
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="/public/css/bootstrap.min.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="/public/css/style.css">
+    <!-- Responsive-->
+    <link rel="stylesheet" href="/public/css/responsive.css">
+    <!-- fevicon -->
+    <link rel="icon" href="/public/images/fevicon.png" type="image/gif" />
+    <!-- Tweaks for older IEs-->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="/public/css/style1.css">
+    <link rel="stylesheet" href="/public/css/styles.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+    <!-- jQuery, Popper.js, and Bootstrap JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        .navbar {
+
+            flex-direction: row;
+            align-items: center;
+            padding: 2rem;
+            justify-content: left;
+        }
+
+        .nav-item {
+            width: 100%;
+            margin-bottom: 0.5rem;
+            padding-left: 1rem;
+        }
+
+        .nav-link {
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            padding: 0.5rem 2rem;
+            width: 100%;
+        }
+
+        .active-nav-item .nav-link {
+            background-color: black;
+            color: white;
+            padding: 10px;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #fcfcfc;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 2rem; /* Adjust padding as needed */
+        }
+
+        /* Add styles for the main content area */
+        .content {
+            margin-top: 80px; /* Adjust margin to make content start below the header */
+        }
+
+        /* Adjust table styles to take full remaining width */
+        table {
+            width: 100%;
+        }  
+        
+        body {
+            padding-top: 56px;
+        }
+
+        .category-table th, .category-table td {
+            text-align: center;
+        }
+
+        .edit-modal {
+            margin-top: 50px;
+        }  
+
+        .button-style {
+         padding: 15px 30px;
+         /* color: #2b2b2b; */
+         font-size: 17px;
+         line-height: 20px;
+         font-weight: 400;
+         border-radius: 30px;
+         text-transform: uppercase;
+         color: #fff;
+         background: #f0390f;
+         margin-top: 10px;
+        padding: 10px 20px;
+        }  
+        
+        .contactus1 {
+        padding: 0px 10px;
+        width: 100%;
+        height: 50px;
+        background: #fff;
+        color: #501f14;
+        font-size: 17px;
+        font-weight: normal;
+        border-radius: 11px;
+        border: inherit;
+        box-shadow: 0px 0px 2px 0 #f34b52d4;  
+        margin: 5px;          
+        }        
+    </style>
+</head>
+
+<body class="main-layout">
+    <!-- Add your body content here -->
+    <!-- loader -->
+    <div class="navbar theme-orange shadowNav " style="border: 1px solid 1px solid rgb(230 230 230);">
+        <div>
+            <div style="padding-left: 1rem;height: 13rem">
+                <img src="/public/images/1.png" alt="" class="avatar">
+                <h2 style="font-size: 0.8rem;color: #2d2d2d;font-weight: bold;width: 100%;padding-top: 3rem;">
+                    Welcome back
+                </h2>
+            </div>
+            <ul class="navbar-nav" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                <li class="nav-item">
+                    <a class="nav-link" href="/additems">Add Items<i class="fas fa-shopping-cart"></i></a>
+                </li>
+                <li class="nav-item" style="width: 100%; border-top-left-radius: 6px; border-bottom-left-radius: 6px;">
+                    <a class="nav-link" href="/edititems">Edit Items<i class="fas fa-shopping-cart"></i></a>
+                </li>
+                <li class="nav-item" style="width: 100%; border-top-left-radius: 6px; border-bottom-left-radius: 6px;">
+                    <a class="nav-link" href="/addsuppliers">Add Suppliers<i class="fas fa-shopping-cart"></i></a>
+                </li>                
+                <li class="nav-item" style="width: 100%; border-top-left-radius: 6px; border-bottom-left-radius: 6px;">
+                    <a class="nav-link" href="/vieworders">Store Orders<i class="fas fa-shopping-basket"></i></a>
+                </li>                
+                <li class="nav-item">
+                    <a class="nav-link" href="/login">Logout<i class="fas fa-sign-out-alt"></i></a>
+                </li>
+            </ul>                      
+        </div>
+
+    </div> 
+    <div class="main-content" style="margin:0rem;">
+
+        <div class="shadowNav" style="    
+        z-index: 2;
+        background-color: #fcfcfc;
+        display: grid;
+        height: 11vh;
+        grid-template-columns: 60% 40%;
+  align-items: center;
+        flex-direction: row;
+        position: fixed;
+        width: 100%;
+        justify-content: left;
+  border: 1px solid 1px solid rgb(230 230 230);
+  
+  ">
+              <div style="display: flex;width: 100%;justify-content: center;">
+                    <h6 style="   font-weight: 800;
+                    font-size: 1.5em;
+                    padding-left: 15rem;">Manage Suppliers
+                    </h6>
+              </div>
+    </div>
+
+<div class="container" style="margin-top: 70px; overflow-y: auto;">
+    <div class="row">
+        <div class="container">
+            <!-- Form to create a new supplier -->
+            <h3>Create Supplier</h3>
+            <form id="createSupplierForm">
+                <div class="form-group">
+                    <label for="supplierName">Supplier Name:</label>
+                    <input class="contactus1" type="text" class="form-control" id="supplierName" required>
+                </div>
+                <div class="form-group">
+                    <label for="emailAddress">Email Address:</label>
+                    <input class="contactus1" type="text" class="form-control" id="emailAddress" required>
+                </div>
+                <!-- Add more input fields for other supplier properties -->
+                <button type="submit" class="button-style">Create Supplier</button>
+            </form>
+        </div>
+        <div class="col-md-6">
+            <!-- Table to list suppliers -->
+            <h3>Update Suppliers</h3>
+            <table class="table table-bordered supplier-table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="supplierTableBody"></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+         
+</div>    
+    
+<!-- Modal for editing supplier -->
+<div class="modal fade" id="editSupplierModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Edit Supplier</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Form to edit supplier -->
+                <form id="editSupplierForm">
+                    <input type="hidden" id="editSupplierId">
+                    <div class="form-group">
+                        <label for="editSupplierName">Supplier Name:</label>
+                        <input type="text" class="form-control" id="editSupplierName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="editEmailAddress">Email Address:</label>
+                        <input type="text" class="form-control" id="editEmailAddress" required>
+                    </div>
+                    <!-- Add more input fields for other supplier properties here -->
+                    <button type="submit" class="button-style">Update Supplier</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="/public/js/jquery.min.js"></script>
+    <script src="/public/js/bootstrap.bundle.min.js"></script>
+    <script src="/public/js/jquery-3.0.0.min.js"></script>
+    <!-- sidebar -->
+    <script src="/public/js/custom.js"></script>
+    <script>
+        let allSuppliers = [];
+        document.addEventListener("DOMContentLoaded", function () {
+            // Fetch suppliers and populate the table
+            fetchSuppliers();
+            // Event listener for the create supplier form
+            document.getElementById("createSupplierForm").addEventListener("submit", function (event) {
+                event.preventDefault();
+                createSupplier();
+            });
+            // Event listener for the edit supplier form (modal)
+            document.getElementById("editSupplierForm").addEventListener("submit", function (event) {
+                event.preventDefault();
+                updateSupplier();
+            });
+        });
+
+        function fetchSuppliers() {
+            // Replace the URL with your supplier API endpoint
+            fetch("http://localhost:5358/api/suppliers")
+                .then(response => response.json())
+                .then(suppliers => {
+                    allSuppliers = suppliers;
+                    const supplierTableBody = document.getElementById("supplierTableBody");
+                    supplierTableBody.innerHTML = "";
+
+                    suppliers.forEach(supplier => {
+                        const row = document.createElement("tr");
+                        row.innerHTML = `
+                            <td>${supplier.supplierName}</td>
+                            <td>${supplier.emailAddress}</td>
+                            <td>
+                                <button class="button-style" onclick="openEditModal(${supplier.supplierId},'${supplier.supplierName}','${supplier.emailAddress}')">Edit</button>
+                            </td>
+                        `;
+                        supplierTableBody.appendChild(row);
+                    });
+                })
+                .catch(error => {
+                    console.error('Fetch suppliers error:', error);
+                });
+        }
+
+        function createSupplier() {
+            const supplierName = document.getElementById("supplierName").value;
+            const emailAddress = document.getElementById("emailAddress").value;
+
+            // Add code to collect other supplier properties from input fields
+
+            fetch("http://localhost:5358/api/suppliers", {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                "supplierName": supplierName,
+                "emailAddress": emailAddress,
+                "phoneNumber": "555-1234",
+                "contactPerson": "John Supplier",
+                "street": "123 Main St",
+                "city": "Cityville",
+                "state": "Stateville",
+                "postalCode": "12345",
+                "status": "Active",
+                "rating": 4,
+                "createdAt": "2023-10-19T18:19:21.683",
+                "updatedAt": "2023-10-19T18:19:21.683"
+            }),
+            })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! Status: ${response.status}`);
+                    }
+                    return response.json();
+                })
+                .then(() => {
+                    fetchSuppliers();
+                    document.getElementById("createSupplierForm").reset();
+                })
+                .catch(error => {
+                    console.error('Create supplier error:', error);
+                });
+        }
+
+        function openEditModal(supplierId, supplierName, emailAddress) {
+            // Populate the edit supplier form (modal) with data
+            document.getElementById("editSupplierId").value = supplierId;
+            document.getElementById("editSupplierName").value = supplierName;
+            document.getElementById("editEmailAddress").value = emailAddress;
+
+            // Add code to populate other input fields with existing supplier data
+
+            $('#editSupplierModal').modal('show');
+        }
+
+        function updateSupplier() {
+            const supplierId = document.getElementById("editSupplierId").value;
+            const supplierName = document.getElementById("editSupplierName").value;
+            const emailAddress = document.getElementById("editEmailAddress").value;
+
+            const supplier = allSuppliers.find(supp => supp.supplierId == supplierId);
+
+            // Add code to collect other supplier properties from input fields
+            fetch(`http://localhost:5358/api/suppliers/${supplierId}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                "supplierId": supplierId,
+                "supplierName": supplierName,
+                "emailAddress": emailAddress,
+                "phoneNumber": supplier.phoneNumber,
+                "contactPerson": supplier.contactPerson,
+                "street": supplier.street,
+                "city": supplier.city,
+                "state": supplier.state,
+                "postalCode": supplier.postalCode,
+                "status": supplier.status,
+                "rating": supplier.rating,
+                "createdAt": supplier.createdAt,
+                "updatedAt": supplier.updatedAt
+            }),
+            })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! Status: ${response.status}`);
+                    }
+                    //return response.json();
+                })
+                .then(() => {
+                    fetchSuppliers();
+                    $('#editSupplierModal').modal('hide');
+                })
+                .catch(error => {
+                    console.error('Update supplier error:', error);
+                });
+        }
+
+    </script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Get all nav items
+        const navItems = document.querySelectorAll('.nav-item');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        // Function to remove active class from all items
+        function removeActiveClass() {
+            navItems.forEach((innerItem) => innerItem.classList.remove('active-nav-item'));
+        }
+
+        // Add click event listener to each nav item
+        navItems.forEach((item, index) => {
+            item.addEventListener('click', function () {
+                removeActiveClass();
+                // Add active class to clicked item
+                this.classList.add('active-nav-item');
+            });
+        });
+
+        // Check current URL and set active class
+        const currentURL = window.location.pathname;
+        navLinks.forEach((link, index) => {
+            if (link.getAttribute('href') === currentURL) {
+                removeActiveClass();
+                navItems[index].classList.add('active-nav-item');
+            }
+        });
+    });
+
+</script>    
+</body>
+
+</html>

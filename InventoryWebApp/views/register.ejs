@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <link rel="stylesheet" href="/public/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/public/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="/public/css/styles.css">
+
+    <title>Registration Page</title>
+
+
+</head>
+
+<body>
+    
+    <div class="navbar theme-orange" style="padding-top: 0rem;display: flex;justify-content: center;align-items: center;">
+        <div class="header">
+            <div class="user-label">
+                <img src="/public//images/1.png" alt="" class="avatar">
+    
+            </div>
+        </div>
+    </div>
+        <div class="RegisterPage " style="width: 100%;margin-left:17rem;">
+            <!-- Card division -->
+            <div class="row " style="width: 100%;margin-left: 15rem;">
+                <div class="col-md-6 " style="padding-top: 1rem;">
+                    <div class="card mt-2 " style="border: none;">
+                        <!-- Top Label -->
+                        <div class="card-header" style="
+                            background-color: #f15e47;">
+                            <h3 style="    font-size: 1.75rem;
+              font-weight: bold;
+              color: white;
+              font-size: 21px;
+              font-weight: bold;">Register</h3>
+                        </div>
+
+                        <div class="card-body">
+                            <form id="login-form" >
+                                <div class="form-group">
+                                    <label for="username">Username</label>
+                                    <input type="text" name="username" class="form-control" id="Username"
+                                        style="border-radius: 0;" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password">Password:</label>
+                                    <input type="password" class="form-control" id="firstpassword" name="userPassword"
+                                        style="border-radius: 0;" required>
+                                </div>
+
+
+
+                                <div class="form-group">
+                                    <label for="userEmail">Email address:</label>
+                                    <input type="email" name="userEmail" class="form-control" id="userEmail"
+                                        style="border-radius: 0;" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="userContact">Contact Number</label>
+                                    <input type="tel" name="userContact" class="form-control" id="userContact"
+                                        style="border-radius: 0;" required>
+                                </div>
+
+                                <button  class="btn  mt-3" onclick="signup(event)"
+                                    style="border-radius: 0;background-color:  #f15e47;color: white;"
+                                    >Register</button>
+                            </form>
+
+                            <div style="padding: 1rem 0rem; display: flex;">
+                                <h3 style="font-size: 1rem;font-weight: bold;">
+                                    
+                                </h3>
+                            </div>
+
+                            <div class="mt-2">
+                                <p style="color: #f15e47;font-weight: bold;">Have an account? <a
+                                        style="font-weight: 300;" href="/login">Login</a></p>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+<script type="text/JavaScript">
+    const message = "Hello there!";
+    function signup(event) {
+        event.preventDefault();
+         // Collect form data
+         var registerDto = {
+            username: document.getElementById("login-form").elements["username"].value,
+            userEmail: document.getElementById("login-form").elements["userEmail"].value,
+            userPassword: document.getElementById("login-form").elements["userPassword"].value,
+            userContact: document.getElementById("login-form").elements["userContact"].value,
+            userRole: 0 // 
+         };
+         // Send registration data to the server
+         fetch('http://localhost:5358/api/Auth/RegisterUser', {
+            method: 'POST',
+            headers: {
+               'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(registerDto),
+         })
+            //.then(response => response.json())
+            .then(data => {
+               // Handle the response from the server
+               alert('User registered successfully!');
+               window.location.href = "/login";
+               // Optionally, you can perform additional actions after successful registration
+            })
+            .catch((error) => {
+               console.log('Error:', error);
+               // Handle errors, such as displaying an error message to the user
+            });
+
+         // Close the modal
+         //$('#signup-modal').modal('hide');
+      }    
+</script>
+
+</body>
+
+</html>

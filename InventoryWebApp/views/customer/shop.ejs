@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <!-- basic -->
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <!-- mobile metas -->
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+   <!-- site metas -->
+   <title>sbs</title>
+   <meta name="keywords" content="">
+   <meta name="description" content="">
+   <meta name="author" content="">
+   <!-- bootstrap css -->
+   <link rel="stylesheet" href="/public/css/bootstrap.min.css">
+   <!-- style css -->
+   <link rel="stylesheet" href="/public/css/style.css">
+   <!-- Responsive-->
+   <link rel="stylesheet" href="/public/css/responsive.css">
+   <!-- fevicon -->
+   <link rel="icon" href="/public/images/fevicon.png" type="image/gif" />
+   <!-- Tweaks for older IEs-->
+   <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+   <link rel="stylesheet" href="/public/css/style1.css">
+   <link rel="stylesheet" href="/public/css/styles.css">
+
+   <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+   <!-- Fonts & Icons -->
+   <link rel="stylesheet"
+       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+   <!-- jQuery, Popper.js, and Bootstrap JavaScript -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        /* Custom styles for the navbar in the content section */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .product-card {
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: center;
+            position: relative;
+        }
+
+        .button-style {
+         padding: 15px 30px;
+         /* color: #2b2b2b; */
+         font-size: 17px;
+         line-height: 20px;
+         font-weight: 400;
+         border-radius: 30px;
+         text-transform: uppercase;
+         color: #fff;
+         background: #f0390f;
+         margin-top: 10px;
+        padding: 10px 20px;
+        }
+
+        .navbar {
+            top: 0;
+            flex-direction: row;
+            align-items: center;
+            padding: 2rem;
+            justify-content: left;
+        }
+
+        .nav-item {
+            width: 100%;
+            margin-bottom: 0.5rem;
+            padding-left: 1rem;
+        }
+
+        .nav-link {
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            padding: 0.5rem 2rem;
+            width: 100%;
+        }
+
+        .active-nav-item .nav-link {
+            background-color: black;
+            color: white;
+            padding: 10px;
+        }        
+    </style>
+</head>
+
+<body class="main-layout">
+
+
+    <div class="navbar theme-orange shadowNav " style="border: 1px solid 1px solid rgb(230 230 230);">
+        <div>
+            <div style="padding-left: 1rem;height: 13rem">
+                <img src="/public/images/1.png" alt="" class="avatar">
+                <h2 style="font-size: 0.8rem;color: #2d2d2d;font-weight: bold;width: 100%;padding-top: 3rem;">
+                    Welcome back
+                </h2>
+            </div>
+            <ul class="navbar-nav" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                <li class="nav-item">
+                    <a class="nav-link" href="/shop">Shop<i class="fas fa-shopping-cart"></i></a>
+                </li>
+                <li class="nav-item" style="width: 100%; border-top-left-radius: 6px; border-bottom-left-radius: 6px;">
+                    <a class="nav-link" href="/shoppingcart">Shopping Cart<i class="fas fa-shopping-basket"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/login">Logout<i class="fas fa-sign-out-alt"></i></a>
+                </li>
+            </ul>                      
+        </div>
+
+    </div>
+
+     <div class="main-content" style="margin:0rem;">
+
+        <div class="shadowNav" style="    
+        z-index: 2;
+        background-color: #fcfcfc;
+        display: grid;
+        height: 11vh;
+        grid-template-columns: 60% 40%;
+  align-items: center;
+        flex-direction: row;
+        position: fixed;
+        width: 100%;
+        justify-content: left;
+  border: 1px solid 1px solid rgb(230 230 230);
+  
+  ">
+              <div style="display: flex;width: 100%;justify-content: center;">
+                    <h6 style="   font-weight: 800;
+                    font-size: 1.5em;
+                    padding-left: 15rem;">View Products
+                    </h6>
+              </div>
+    </div>
+
+    <!-- Content Area -->
+    <div class="contact" style="margin: 50px; width: 100%; overflow-y: auto;">
+        <div>
+            <div class="container">
+            <div class="row" style="margin: 50px; width: 100%; overflow-y: auto;">
+               
+                    <div class="col-md-12">
+                        <!-- Product Grid -->
+                        <div class="col-md-12 product-grid" id="productGrid">
+                            <!-- Product cards will be dynamically populated here -->
+                        </div>
+                    </div>
+               
+            </div>
+            </div>
+        </div>
+    </div>
+        
+</div>
+
+<!-- Add this modal code to your HTML -->
+<div class="modal fade" id="cartConfirmationModal" tabindex="-1" role="dialog" aria-labelledby="cartConfirmationModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="cartConfirmationModalLabel">Item Added to Cart</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          The item has been added to your cart.
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Modal for Product Details -->
+    <div class="modal fade" id="productDetailsModal" tabindex="-1" role="dialog" aria-labelledby="productDetailsModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="productDetailsModalLabel">Product Details</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+              <div class="modal-body" id="productDetailsBody">
+                  <!-- Product details will be dynamically populated here -->
+              </div>
+          </div>
+      </div>
+  </div>   
+
+
+   <!-- JavaScript files-->
+   <script src="/public/js/jquery.min.js"></script>
+   <script src="/public/js/bootstrap.bundle.min.js"></script>
+   <script src="/public/js/jquery-3.0.0.min.js"></script>
+   <!-- sidebar -->
+   <script src="/public/js/custom.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Fetch products from the server
+            fetch("http://localhost:5358/api/products/all")
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! Status: ${response.status}`);
+                    }
+                    return response.json();
+                })
+                .then(products => {
+                    // Populate the product grid
+                    localStorage.setItem("products",JSON.stringify(products));
+                    const productGrid = document.getElementById("productGrid");
+                  console.log("The products are: ",products);
+                    products.forEach(product => {
+                        // Create a product card
+                        const card = document.createElement("div");
+                        card.classList.add("product-card");
+
+                        // Add product details to the card
+                        card.innerHTML = `
+                            <h3>${product.productName}</h3>
+                            <p>Selling Price: R${product.productSellingPrice}</p>
+                            <button class="button-style" onclick="viewDetails(${product.productId})">View Details</button>
+                            <button class="button-style" onclick="addToCart(${product.productId})">Add to Cart</button>
+                        `;
+
+                        // Append the card to the product grid
+                        productGrid.appendChild(card);
+                    });
+                })
+                .catch(error => {
+                    console.error('Fetch error:', error);
+                });
+        });
+
+        // Function to view details of a product
+        function viewDetails(productId) {
+            // Fetch the product details from the server
+            fetch(`http://localhost:5358/api/products/${productId}`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! Status: ${response.status}`);
+                    }
+                    return response.json();
+                })
+                .then(product => {
+                    // Populate the modal with product details
+                    const modalBody = document.getElementById("productDetailsBody");
+                    modalBody.innerHTML = `
+                        <h3>${product.productName}</h3>
+                        <p>Price: R${product.productSellingPrice}</p>
+                        <p>Description: ${product.productImage}</p>
+                    `;
+
+                    // Show the modal
+                    $('#productDetailsModal').modal('show');
+                })
+                .catch(error => {
+                    console.error('Fetch error:', error);
+                });
+        }
+
+        // Function to add a product to the cart
+        function addToCart(productId) {
+            // Fetch the existing cart items from localStorage
+            let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+            const existingItem = cartItems.find(item => item.productId === productId);
+
+            if (existingItem) {
+                existingItem.quantity++;
+            } else {
+                cartItems.push({
+                  productId: productId,
+                    quantity: 1
+                });
+            }
+
+            // Update the cart in localStorage
+            localStorage.setItem("cart", JSON.stringify(cartItems));
+            console.log(`Product ID ${productId} added to the cart`);
+            addToCartAndShowModal(productId);
+        }
+
+        function addToCartAndShowModal(productId) {
+            const modalBody = document.querySelector("#cartConfirmationModal .modal-body");
+            modalBody.textContent = `Product ID ${productId} has been added to your cart.`;
+            $('#cartConfirmationModal').modal('show');
+        }        
+
+    </script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Get all nav items
+        const navItems = document.querySelectorAll('.nav-item');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        // Function to remove active class from all items
+        function removeActiveClass() {
+            navItems.forEach((innerItem) => innerItem.classList.remove('active-nav-item'));
+        }
+
+        // Add click event listener to each nav item
+        navItems.forEach((item, index) => {
+            item.addEventListener('click', function () {
+                removeActiveClass();
+                // Add active class to clicked item
+                this.classList.add('active-nav-item');
+            });
+        });
+
+        // Check current URL and set active class
+        const currentURL = window.location.pathname;
+        navLinks.forEach((link, index) => {
+            if (link.getAttribute('href') === currentURL) {
+                removeActiveClass();
+                navItems[index].classList.add('active-nav-item');
+            }
+        });
+    });
+
+</script>    
+</body>
+
+</html>

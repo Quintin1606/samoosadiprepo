@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="/css/style.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/public/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+    <link rel="stylesheet" href="/public//css/styles.css">
+
+    <title>Login Page</title>
+
+
+</head>
+
+<body>
+
+    <div class="navbar theme-orange" style="padding-top: 0rem;display: flex;justify-content: center;align-items: center;">
+        <div class="header">
+            <div class="user-label">
+                <img src="/public//images/1.png" alt="" class="avatar">
+    
+            </div>
+        </div>
+    </div>
+
+        <!-- Main Content -->
+        <div class="LoginPage" style="padding-left: 5rem;width: 100vw;">
+
+
+            <div class="col-md-6" style="border-radius: 0px;display: flex;justify-content: center;">
+
+                <div class="card mt-5" style="border-radius: 0px; border: none;width: 60%;">
+
+                    <!-- Top Label -->
+                    <div class="card-header" style="
+                              background-color: #f15e47;">
+                        <h3 style="    font-size: 1.75rem;
+                font-weight: bold;
+                color: white;
+                font-size: 21px;
+                font-weight: bold;">Login</h3>
+                    </div>
+
+
+                    <!-- Card body -->
+                    <div class="card-body" style="border: none;">
+                        <form id="login-form" >
+                            <div class="form-group py-2">
+                                <label for="email">Username</label>
+                                <input type="text" name="username" class="form-control" id="username"
+                                    style="border-radius: 0;" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" class="form-control" id="userPassword" name="userPassword"
+                                    style="border-radius: 0;" required>
+                            </div>
+                            <!-- Call the loginUser function on form submit -->
+                            <button  class="btn mt-2" onclick="login(event)"
+                                style="border-radius: 0; background-color: #f15e47; color: white;">Login</button>
+                        </form>
+                        <div style="padding: 1rem 0rem; display: flex;">
+                            <h3 style="font-size: 1rem;font-weight: bold;">
+                            </h3>
+                        </div>
+                        <div class="mt-3">
+                            <p style="color:#f15e47;font-weight: bold;">Don't have an account? <a
+                                    style="font-weight: 300;" href="/register">Register</a></p>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+<script>
+      function login(event) {
+         // Prevent the default form submission
+         event.preventDefault();
+
+         // Collect form data
+         var emailInput = document.getElementById("login-form").querySelector('input[name="username"]');
+         var passwordInput = document.getElementById("login-form").querySelector('input[name="userPassword"]');
+
+         var loginDto = {
+            username: emailInput.value,
+            userPassword: passwordInput.value
+         };
+
+         // if (loginDto.username === "admin@email.com") { //admin
+         //    window.location.href = "/createmenu";
+         // } else if (loginDto.username === "employee@email.com") { // customer
+         //    window.location.href = "/shop";
+         // } else if (loginDto.username === "tshimolong@gmail.com") { // supplier
+         //    window.location.href = "/additems";
+         // }
+
+         // Send the request
+         fetch('http://localhost:5358/api/Auth/LoginUser', {
+            method: 'POST',
+            headers: {
+               'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(loginDto),
+         })
+            .then(response => {
+               if (!response.ok) {
+                  throw new Error(`HTTP error! Status: ${response.status}`);
+               }
+               return response.json();
+            })
+            .then(data => {
+               // Handle the response from the server
+               if (data.userRole === 0) {
+                  // Login customer
+                  window.location.href = "/shop";
+               } else if (data.userRole === 1) {
+                  // Login admin
+                  window.location.href = "/createmenu";
+               } else if (data.userRole === 2) {
+                  // Login supplier
+                  window.location.href = "/additems";
+               }
+            })
+            .catch((error) => {
+               console.error('Error:', error);
+            });
+      }
+
+</script>
+</body>
+
+</html>
